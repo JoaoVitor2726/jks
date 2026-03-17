@@ -38,7 +38,6 @@ studyflow-cli/
 ├── requirements.txt
 ├── VERSION
 ├── CHANGELOG.md
-├── LICENSE
 └── .gitignore
 ```
 

@@ -82,7 +82,7 @@ Tarefa concluída com sucesso!
 Escolha uma opção: 2
 [1] Revisar banco de dados - Concluída
 ```
-![image](https://user-images.githubusercontent.com/.../imagem.png)
+![image](https://github.com/ArthurNeiva017/studyflow/blob/main/docs/Evid%C3%AAncia%20Funcionamento.png)<br>
 <strong>A evidência do funcionamento do programa está na pasta `Docs`</strong>
 
 ## Como usar

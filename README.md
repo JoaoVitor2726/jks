@@ -46,7 +46,7 @@ studyflow-cli/
 !Execute no Power Shell ou no CMD do Linux!
 
 git clone https://github.com/ArthurNeiva017/studyflow.git
-cd studyflow-cli
+cd studyflow
 python -m venv .venv
 source .venv/bin/activate  # Linux/macOS
 .venv\Scripts\activate     # Windows

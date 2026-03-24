@@ -33,7 +33,7 @@ studyflow-cli/
 ├── src/
 ├── tests/
 ├── data/
-├─ docs/
+├── docs/
 ├── .github/workflows/
 ├── README.md
 ├── requirements.txt

@@ -1,4 +1,5 @@
 import os
+
 from flask import Flask, jsonify, render_template, request
 
 from src.api_service import get_study_advice

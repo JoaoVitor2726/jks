@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>StudyFlow</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>StudyFlow</h1>
+    <p>Organizador simples de tarefas de estudo.</p>
+
+    <section class="card">
+      <h2>Nova tarefa</h2>
+      <input type="text" id="taskInput" placeholder="Digite uma tarefa de estudo" />
+      <button onclick="addTask()">Adicionar</button>
+    </section>
+
+    <section class="card">
+      <h2>Tarefas</h2>
+      <ul id="taskList"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Dica de estudo</h2>
+      <button onclick="loadStudyTip()">Buscar dica</button>
+      <p id="studyTip"></p>
+    </section>
+  </main>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

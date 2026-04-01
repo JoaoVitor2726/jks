@@ -1,7 +1,7 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, jsonify, render_template, request
 
-from src.task_manager import TaskManager
 from src.api_service import get_study_advice
+from src.task_manager import TaskManager
 
 app = Flask(__name__, template_folder="../templates", static_folder="../static")
 

@@ -24,31 +24,31 @@ A proposta será oferecer uma forma simples e acessível de registrar e acompanh
 ## Tecnologias utilizadas
 - Python 3
 - Pytest
-- Ruff
+- 
 - GitHub Actions
 - JSON
 
 ## Estrutura do projeto
 ```bash
-studyflow-cli/
+controle_medicamentos/
 ├── src/
+│ ├── main.py
+│ ├── manager.py
 ├── tests/
-├── data/
-├── docs/
-├── .github/workflows/
-├── README.md
+│ └── test_manager.py
 ├── requirements.txt
+├── README.md
 ├── VERSION
-├── CHANGELOG.md
-└── .gitignore
+├── .gitignore
+└── .github/workflows/ci.yml
 ```
 
 ## Instalação
 ```bash
 !Execute no Power Shell ou no CMD do Linux!
 
-git clone https://github.com/ArthurNeiva017/studyflow.git
-cd studyflow
+git clone https://github.com/JoaoVitor2726/jks.git
+cd Controle de Medicamentos
 python -m venv .venv
 source .venv/bin/activate  # Linux/macOS
 .venv\Scripts\activate     # Windows
@@ -63,25 +63,17 @@ python src/main.py
 ### Exemplo de saída no terminal
 ```text
 PS C:\Users\Arthur\studyflow> python src/main.py
-==== StudyFlow CLI ====
-1 - Adicionar tarefa
-2 - Listar tarefas
-3 - Concluir tarefa
-4 - Remover tarefa
-5 - Sair
-Escolha uma opção: 1
+===== CONTROLE DE MEDICAMENTOS =====
+1. Adicionar
+2. Listar
+3. Marcar como tomado
+4. Remover
+5. Sair
+Escolha: 1
 Digite a tarefa: Revisar banco de dados
 Tarefa adicionada com sucesso!
 
-Escolha uma opção: 2
-[1] Revisar banco de dados - Pendente
 
-Escolha uma opção: 3
-Digite o ID da tarefa: 1
-Tarefa concluída com sucesso!
-
-Escolha uma opção: 2
-[1] Revisar banco de dados - Concluída
 ```
 ![image](https://github.com/ArthurNeiva017/studyflow/blob/main/docs/Evid%C3%AAncia%20Funcionamento.png)<br>
 <strong>A evidência do funcionamento do programa está na pasta `Docs`</strong>
@@ -115,6 +107,6 @@ Versão atual: Study Flow **v1.0.0**
 A versão está declarada no arquivo `pyproject.toml` e também no arquivo `VERSION`.
 
 ## Autor
-Arthur Barroso Neiva
+João Vitor Belchior Estanislau
 
 

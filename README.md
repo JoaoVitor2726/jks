@@ -1,21 +1,22 @@
-# StudyFlow CLI
+# Controle de Medicamentos CLI
 
-Aplicação em linha de comando desenvolvida para ajudar estudantes a organizar sua rotina de estudos de forma simples, prática e acessível.
+Aplicação simples em Python com interface de linha de comando (CLI), desenvolvida para auxiliar no gerenciamento de medicamentos e seus horários de uso. O sistema permite cadastrar, visualizar, marcar como tomado e remover medicamentos, ajudando usuários a manterem uma rotina organizada e segura.
 
 ## Problema real
-Muitos estudantes têm dificuldade para manter uma rotina organizada de estudos, lembrar tarefas pendentes e acompanhar o que já foi concluído. Isso pode prejudicar o aprendizado, a disciplina e a produtividade.
+Muitas pessoas, especialmente idosos, pacientes com tratamentos contínuos e cuidadores, enfrentam dificuldades para lembrar os horários corretos de administração de medicamentos. Esse problema pode causar esquecimentos, uso incorreto e impactos negativos na saúde.
 
 ## Proposta da solução
-O StudyFlow CLI oferece um gerenciador simples de tarefas de estudo com interface de terminal. O usuário pode cadastrar, listar, concluir e remover tarefas, mantendo uma rotina mais organizada sem depender de ferramentas complexas.
+A proposta será oferecer uma forma simples e acessível de registrar e acompanhar medicamentos, permitindo controle básico e eficiente da rotina de medicação.
 
 ## Público-alvo
-- Estudantes do ensino médio, técnico ou superior
-- Pessoas com dificuldade para manter rotina de estudos
-- Usuários que preferem soluções simples em terminal
+- Idosos
+- Pacientes em tratamento contínuo
+- Cuidadores
+- Pessoas com dificuldade de organização de rotina
 
 ## Funcionalidades principais
-- Adicionar tarefa de estudo
-- Listar tarefas cadastradas
+- Adicionar medicamento
+- Listar medicamentos cadastrados
 - Marcar tarefa como concluída
 - Remover tarefa
 - Salvar tarefas em arquivo JSON

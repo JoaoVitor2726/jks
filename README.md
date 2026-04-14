@@ -24,7 +24,7 @@ A proposta será oferecer uma forma simples e acessível de registrar e acompanh
 ## Tecnologias utilizadas
 - Python 3
 - Pytest
-- 
+- Flake8
 - GitHub Actions
 - JSON
 

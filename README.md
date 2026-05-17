@@ -32,16 +32,36 @@ A proposta será oferecer uma forma simples e acessível de registrar e acompanh
 ```bash
 controle_medicamentos/
 ├── src/
-│ ├── main.py
-│ ├── manager.py
+│   ├── main.py
+│   ├── task_manager.py
+│   ├── api_service.py
+│   └── __init__.py
+├── data/
+│   └── tasks.json
 ├── tests/
-│ └── test_manager.py
+│   ├── test_task_manager.py
+│   └── test_api.py
 ├── requirements.txt
 ├── README.md
 ├── VERSION
-├── .gitignore
 └── .github/workflows/ci.yml
 ```
+
+## Integração com API pública
+O sistema utiliza a World Time API para registrar automaticamente o horário real em que um medicamento é marcado como tomado. Ao marcar um medicamento como tomado, o aplicativo chama a API e salva o campo `datetime` retornado por `http://worldtimeapi.org/api/timezone/America/Sao_Paulo`.
+
+## World Time API
+A World Time API é um serviço público que fornece a data e hora atuais para fusos horários específicos. Neste projeto, ela é usada para garantir que o registro de tomada seja gravado com o horário real de São Paulo.
+
+## Registro automático de horário
+Quando o usuário marca um medicamento como tomado, o sistema:
+- consulta a API de horário;
+- obtém o campo `datetime` retornado;
+- salva o valor em JSON no campo `taken_at`;
+- exibe o horário real do registro no terminal.
+
+## Publicação / Deploy
+Este projeto pode ser executado localmente como uma aplicação CLI. Para publicar ou implantar, basta manter o repositório atualizado e usar o GitHub Actions para validar cada push e pull request. O workflow já configura Python 3.10, instala dependências, executa lint com `flake8` e roda os testes com `pytest`.
 
 ## Instalação
 ```bash

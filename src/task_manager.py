@@ -3,6 +3,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+try:
+    from src.api_service import get_current_time
+except ImportError:
+    from api_service import get_current_time
+
 DEFAULT_DATA_FILE = Path(__file__).resolve().parent.parent / 'data' / 'tasks.json'
 
 
@@ -21,16 +26,19 @@ class TaskManager:
         with self.data_file.open('w', encoding='utf-8') as file:
             json.dump(tasks, file, ensure_ascii=False, indent=2)
 
-    def add_task(self, title: str) -> dict:
+    def add_task(self, title: str, scheduled_time: str | None = None) -> dict:
         title = title.strip()
+        scheduled_time = scheduled_time.strip() if scheduled_time else ''
         if not title:
-            raise ValueError('A tarefa não pode estar vazia.')
+            raise ValueError('O nome do medicamento não pode estar vazio.')
 
         tasks = self._load()
         task = {
             'id': self._next_id(tasks),
             'title': title,
+            'scheduled_time': scheduled_time,
             'done': False,
+            'taken_at': '',
         }
         tasks.append(task)
         self._save(tasks)
@@ -44,6 +52,7 @@ class TaskManager:
         for task in tasks:
             if task['id'] == task_id:
                 task['done'] = True
+                task['taken_at'] = get_current_time()
                 self._save(tasks)
                 return task
         raise ValueError('Tarefa não encontrada.')
